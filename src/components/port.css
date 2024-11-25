@@ -94,7 +94,150 @@
     margin: 5px 0;
   }
   
-  .card {
+  .card {.container {
+    margin: 0 auto;
+    align-items: center;
+    margin-bottom: 0px;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 768px){
+        margin-top: 80px;
+    }
+}
+
+.scroll{
+    display: flex;
+    height: 100vh;
+    flex: 1;
+}
+
+.scrolldown{
+    overflow-y: auto;
+    height: 100vh;
+    @media (max-width: 768px){
+        display: none;
+    }
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    color: #333;
+    margin: 0 10px;
+    font-size: 1.5em;
+}
+
+.displaying{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact-button {
+    background-color: #3a3a3a;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+}
+
+.contact-button:hover {
+    background-color: #d4004d;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.sidebar {
+    background-color: #1e1e2f;
+    color: #ffffff;
+    padding: 10px;
+    width: 250px;
+    border-radius: 8px;
+}
+
+.sidebar-header {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.project-list {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.project-list li {
+    margin: 5px 0;
+}
+
+.card {
+    margin-top: 20px;
+    background-color: #282c34;
+    padding: 20px;
+    border-radius: 8px;
+    color: #ffffff;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #3a3b47;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #575869;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 10px;
+}
     margin-top: 20px;
     background-color: #282c34;
     padding: 20px;
