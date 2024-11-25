@@ -1,0 +1,133 @@
+.about-experience {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.about, .experience {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+.about h3, .experience h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.about p, .experience p, .experience ul {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.experience ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.experience li {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.what-we-do {
+    text-align: center;
+}
+
+.what-we-do h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.concentric-circles {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    width: 300px;
+    height: 300px;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center {
+    width: 80px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.layer1, .layer2, .layer3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.layer1 { width: 150px; height: 150px; border: 1px solid #333; }
+.layer2 { width: 200px; height: 200px; border: 1px solid #666; }
+.layer3 { width: 250px; height: 250px; border: 1px solid #999; }
+
+.item {
+    position: absolute;
+    font-size: 0.8rem;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.item.visible {
+    opacity: 1;
+    animation: fade 20s ease-in-out;
+    color: #333;
+}
+
+.cta {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.cta h2 {
+    font-size: 1.8em;
+    color: #333;
+}
+
+.cta p {
+    color: #555;
+    margin: 20px 0;
+}
+
+.contact-button {
+    background-color: #4A90E2;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+    background-color: #357ABD;
+}
+
+/* Gradient animation */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+

@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import AnimatedRoutes from './App'; // Correct import based on default export from App.js
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <AnimatedRoutes /> {/* Render AnimatedRoutes component here */}
   </React.StrictMode>
 );
 

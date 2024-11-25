@@ -1,0 +1,130 @@
+.container {
+    margin: 0 auto;
+    align-items: center;
+    margin-bottom: 0px;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    @media (min-width: 768px){
+        margin-top: 80px;
+        
+    }
+}
+.scroll{
+    display: flex;
+    height: 100vh;
+}
+
+.scrolldown{
+    overflow-y: auto;
+    height: 100vh;
+    @media (max-width: 768px){
+        display: none;
+    }
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.header {
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.header p {
+    color: #666;
+}
+
+.social-icons a {
+    color: #333;
+    margin: 0 10px;
+    font-size: 1.5em;
+}
+
+.displaying{
+    display: flex;
+}
+
+.contact-button {
+    background-color: #3a3a3a;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #d4004d;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .sidebar {
+    background-color: #1e1e2f;
+    color: #ffffff;
+    padding: 10px;
+    width: 250px;
+  }
+  
+  .sidebar-header {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .project-list {
+    list-style-type: none;
+    padding-left: 20px;
+  }
+  
+  .project-list li {
+    margin: 5px 0;
+  }
+  
+  .card {
+    margin-top: 20px;
+    background-color: #282c34;
+    padding: 20px;
+    border-radius: 8px;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+  }
+  
+  button {
+    background-color: #3a3b47;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 0 ;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #575869;
+  }
+  
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+

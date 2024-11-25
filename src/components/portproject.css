@@ -1,0 +1,129 @@
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .sidebar {
+    
+    color: #ffffff;
+    padding: 15px;
+    width: 250px;
+    height: 100%;
+    
+    transition: all 0.3s ease;
+  }
+  
+  .sidebar-header {
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .sidebar-header:hover {
+    color: #61dafb; /* React blue color for hover */
+  }
+  
+  .dropdown-icon {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+  }
+  
+  .project-list {
+    list-style-type: none;
+    padding-left: 20px;
+    margin-top: 10px;
+    transition: opacity 0.3s ease;
+  }
+  
+  .project-list li {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .project-list li:hover {
+    
+    border-radius: 5px;
+  }
+  
+  .project-list li span {
+    font-size: 18px; /* Icon size */
+  }
+  
+  .project-list li:last-child {
+    margin-bottom: 0;
+  }
+  
+  
+  .card {
+    margin-top: 20px;
+    background-color: #282c34;
+    padding: 20px;
+    border-radius: 8px;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+  
+  button {
+    background-color: #3a3b47;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #575869;
+  }
+  .image-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .visit-project-overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #686565; /* Adjust as needed */
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 1rem;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .image-container:hover .visit-project-overlay {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .visit-project-overlay:hover {
+    background-color: #7c7c7c; /* Slightly darker shade on hover */
+  }
