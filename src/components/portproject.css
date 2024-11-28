@@ -1,8 +1,27 @@
+
+.home-page {
+  display: none;
+}
 .app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .home-page {
+    display: block;
+  }
+
+  .app-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    display: block;
   }
+}
+
   .sidebar {
     
     color: #ffffff;
@@ -61,6 +80,7 @@
     margin-bottom: 0;
   }
   
+
   
   .card {
     margin-top: 20px;

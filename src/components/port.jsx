@@ -5,6 +5,7 @@ import './portproject.css'; // Include your CSS for styling the projects sidebar
 import imageCode from '../images/WhatsApp Image 2024-11-25 at 00.18.40_6130a69b.jpg';
 import imagePlan from '../images/WhatsApp Image 2024-11-25 at 00.21.03_fbe69ca2.jpg';
 import imageCollab from '../images/WhatsApp Image 2024-11-25 at 00.18.40_6130a69b.jpg';
+import { Link } from 'react-router-dom';
 
 function HomePage() {
   const itemsRef = useRef([]); // Used to collect refs for fade-in animation
@@ -88,7 +89,7 @@ function HomePage() {
       </section>
 
       <section className="scrolldown">
-        <div className="about-experience">
+        <div className="about-experience2">
           <div className="about">
             <h3>About</h3>
             <p>
@@ -99,7 +100,11 @@ function HomePage() {
               I am constantly expanding my knowledge in programming, focusing on building interactive websites and functional mobile apps.
               I am excited to continue growing in this field and to one day bring my own innovative ideas to life.
             </p>
+
+            
           </div>
+
+          <Link className='resume'><h4>Download CV</h4></Link>
 
           <div className="experience">
             <h3>Experience</h3>
@@ -111,79 +116,77 @@ function HomePage() {
               <li><strong>React:</strong> Developing dynamic and interactive user interfaces.</li>
               <li><strong>UI/UX Design:</strong> Creating user-friendly interfaces and enhancing overall user experiences.</li>
             </ul>
+
             <p>
               I am now focusing on integrating these skills into more advanced projects, aiming to deliver efficient, high-quality web and mobile applications.
             </p>
+
+            <a className="tools">HTML</a>  <a className="tools">CSS</a> <a className="tools">JavaScript</a>
+            <a className="tools">React</a>  <a className="tools">Node</a> 
           </div>
 
           <div className="what-we-do">
-            <h2>What We Do! <span role="img" aria-label="laptop">💻</span></h2>
-            <div className='displaying'>
-            <div className="sidebar">
-  <div onClick={toggleDropdown} className="sidebar-header">
-    <span className="dropdown-icon">{isDropdownOpen ? '▲' : '▼'}</span>
-    _projects/
-  </div>
-  {isDropdownOpen && (
-    <ul className="project-list">
-      <li><span role="img" aria-label="projects">🌀</span> projects</li>
-      <li><span role="img" aria-label="javascript">📄</span> javascript</li>
-      <li><span role="img" aria-label="react">⚛</span> react</li>
-      <li><span role="img" aria-label="nextjs">📘</span> nextjs</li>
-      <li><span role="img" aria-label="html">🌐</span> html</li>
-      <li><span role="img" aria-label="css">🎨</span> css</li>
-    </ul>
-  )}
-</div>
-            <div className="concentric-circles">
-              <div className="circle center">
-                <p>Software Solutions</p>
-              </div>
-              <div className="circle layer1">
-                <p className="item fade" ref={(el) => itemsRef.current.push(el)}>Mobile Apps</p>
-                <p className="item fade" ref={(el) => itemsRef.current.push(el)}>Desktop Apps</p>
-              </div>
-              <div className="circle layer2"></div>
-              <div className="circle layer3">
-                <p className="item fade" ref={(el) => itemsRef.current.push(el)}>Web Design</p>
-                <p className="item fade" ref={(el) => itemsRef.current.push(el)}>UI/UX Design</p>
-              </div>
-            </div>
+            
+            <h2><a className='tools'><span role="img" aria-label="projects">🌀</span> MY WORKS!</a> <span role="img" aria-label="laptop">💻</span></h2>
+            <div className="displaying">
+             
+              <h3>
+                    <a className='tools><span role="img" aria-label="javascript">📄</span> javascript</a>
+                    <a className='tools><span role="img" aria-label="react">⚛</span> react</a>
+                    <a className='tools'><span role="img" aria-label="nextjs">📘</span> nextjs</a>
+                    <a className='tools'><span role="img" aria-label="html">🌐</span> html</a>
+                    <a  ><span role="img" aria-label="css">🎨</span> css</a>
+                    </h3>
             </div>
           </div>
         </div>
+
+        <div className="card">
+          <div className="buttons">
+            <button onClick={() => { setSelectedImage(imageCode); setProjectLink(''); }}>Car-Rental</button>
+            <button onClick={() => { setSelectedImage(imagePlan); setProjectLink(''); }}>Dog-training</button>
+            <button onClick={() => { setSelectedImage(imageCollab); setProjectLink(''); }}>Phone-sales</button>
+          </div>
+          <div className="image-container">
+            <img src={selectedImage} alt="Selected project" />
+            <a 
+              href={projectLink} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="visit-project-overlay"
+            >
+              Visit Project
+            </a>
+          </div>
+
+          <p>Build code quickly and more securely with GitHub Copilot embedded throughout your workflows.</p>
+        </div>
+
         
-
-{/* Sidebar for Projects */}
-
-
-{/* Project Cards */}
-<div className="card">
-  <div className="buttons">
-    <button onClick={() => { setSelectedImage(imageCode); setProjectLink(''); }}>Car-Rental</button>
-    <button onClick={() => { setSelectedImage(imagePlan); setProjectLink(''); }}>Dog-training</button>
-    <button onClick={() => { setSelectedImage(imageCollab); setProjectLink(''); }}>Phone-sales</button>
-  </div>
-  <div className="image-container">
-    <img src={selectedImage} alt="Selected project" />
-    <a 
-      href={projectLink} 
-      target="_blank" 
-      rel="noopener noreferrer" 
-      className="visit-project-overlay"
-    >
-      Visit Project
-    </a>
-  </div>
-
-  <p>Build code quickly and more securely with GitHub Copilot embedded throughout your workflows.</p>
-</div>
-
+      <div className='co-container'>
+        <h2 className='lastheading'>Get In Touch</h2>
+        <p className='lastparagraph'>
+          I’m always on the lookout for new opportunities, and my inbox is open
+          for all. If you’re considering my contribution, have a question, or
+          just want to say hi, you can count on hearing back from me!
+        </p>
+        <a
+          href=""
+          className='button-co'
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          📧 Email Me
+        </a>
+        <p className='footer'>
+          Based on <strong>Bvakacha Takunda's website</strong>. Coded in <strong>Visual Studio Code</strong>. Built with React.
+        </p>
+      </div>
       </section>
-
 
     </div>
   );
 }
 
 export default HomePage;
+

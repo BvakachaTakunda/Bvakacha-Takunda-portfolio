@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../components/portnav.css';
 import { FaBars, FaTimes, FaMoon } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'; // Use Link for navigation
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,12 +24,21 @@ const Navbar = () => {
               <FaTimes />
             </button>
             <ul className="nav-links">
-             <Link to={'port'}><li><a href="#home" onClick={toggleMenu}>Home</a></li></Link> 
-            <Link to={'portabout'}><li><a href="#about" onClick={toggleMenu}>About</a></li></Link>
-            <Link to={'portproject'}><li><a href="#projects" onClick={toggleMenu}>Projects</a></li></Link>
-              <li><a href="#contacts" onClick={toggleMenu}>Contacts</a></li>
-              
-              <li className="dark-mode-icon"><FaMoon /></li>
+              <li>
+                <Link to="/port" onClick={toggleMenu}>Home</Link>
+              </li>
+              <li>
+                <Link to="/portabout" onClick={toggleMenu}>About</Link>
+              </li>
+              <li>
+                <Link to="/portproject" onClick={toggleMenu}>Projects</Link>
+              </li>
+              <li>
+                <Link to="#contacts" onClick={toggleMenu}>Contacts</Link>
+              </li>
+              <li className="dark-mode-icon">
+                <FaMoon />
+              </li>
             </ul>
           </div>
         </div>

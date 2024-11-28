@@ -15,3 +15,18 @@
   width: 150vw; 
   height: 150vh;
 } */
+
+
+
+body {
+  background-color: #ffffff; /* Light mode default */
+  color: #000000;
+}
+
+body.dark-mode {
+  background-color: #121212; /* Dark mode background */
+  color: #ffffff; /* Dark mode text color */
+}
+
+/* You can add other dark mode styles for specific components */
+
