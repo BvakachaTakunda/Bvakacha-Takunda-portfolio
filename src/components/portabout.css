@@ -1,25 +1,19 @@
 
-.home-page {
-    display: block;
-  }
-  @media (min-width: 768px) {
-  .about-experience {
-    display: block;
-  }
-}
+
 
   @media (max-width: 768px) {
    
     .home-page {
       display: none;
     }
+
     .about-experience {
         display: block;
       }
     
 
     .about-experience.active {
-      display: block;
+      display: none;
     }
   }
 

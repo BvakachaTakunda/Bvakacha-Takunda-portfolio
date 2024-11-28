@@ -1,7 +1,5 @@
 
-.home-page {
-  display: none;
-}
+
 .app-container {
   display: flex;
   flex-direction: column;
@@ -11,7 +9,7 @@
 
 @media (max-width: 768px) {
   .home-page {
-    display: block;
+    display: none;
   }
 
   .app-container {

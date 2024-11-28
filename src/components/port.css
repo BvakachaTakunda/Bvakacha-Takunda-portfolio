@@ -1,4 +1,24 @@
 
+@media (max-width: 767px) {
+  .scrolldown {
+    display: none; /* Hide the scrolldown section on small screens */
+  }
+
+  .container {
+    display: flex; /* Ensure the container is displayed */
+    flex-direction: column; /* Maintain the existing layout */
+  }
+
+  .scroll {
+    overflow: hidden; /* Prevent scrolling on small screens */
+  }
+}
+
+@media (min-width: 768px) {
+  .home-page {
+    display: none; /* Hide the home page for larger screens */
+  }
+}
 .container {
   margin: 0 auto;
   align-items: center;
