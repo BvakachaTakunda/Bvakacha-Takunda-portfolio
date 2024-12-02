@@ -1,19 +1,19 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { FaLinkedin, FaGithub, FaEnvelope, FaMoon } from 'react-icons/fa';
 import './port.css';
-import './portproject.css'; // Include your CSS for styling the projects sidebar
+import './portproject.css'; 
 import imageCode from '../images/WhatsApp Image 2024-11-25 at 00.18.40_6130a69b.jpg';
 import imagePlan from '../images/WhatsApp Image 2024-11-25 at 00.21.03_fbe69ca2.jpg';
-import imageCollab from '../images/WhatsApp Image 2024-11-25 at 00.18.40_6130a69b.jpg';
+import imageCollab from '../images/WhatsApp Image 2024-08-28 at 20.28.40_f623aceb.jpg';
 import { Link } from 'react-router-dom';
 
 function HomePage() {
-  const itemsRef = useRef([]); // Used to collect refs for fade-in animation
-  const containerRef = useRef(null); // Reference for scroll container
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false); // Dropdown toggle state
-  const [isDarkMode, setIsDarkMode] = useState(false); // Dark mode toggle state
-  const [selectedImage, setSelectedImage] = useState(imageCode); // State for selected image
-  const [projectLink, setProjectLink] = useState('https://project-code.com'); // State for project link
+  const itemsRef = useRef([]); 
+  const containerRef = useRef(null); 
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false); 
+  const [isDarkMode, setIsDarkMode] = useState(false); 
+  const [selectedImage, setSelectedImage] = useState(imageCode); 
+  const [projectLink, setProjectLink] = useState('https://project-code.com'); 
 
   useEffect(() => {
     const handleScroll = (entries) => {
@@ -45,11 +45,11 @@ function HomePage() {
   };
 
   const toggleDropdown = () => {
-    setIsDropdownOpen((prevState) => !prevState); // Toggle dropdown visibility
+    setIsDropdownOpen((prevState) => !prevState); 
   };
 
   const toggleDarkMode = () => {
-    setIsDarkMode((prevState) => !prevState); // Toggle dark mode
+    setIsDarkMode((prevState) => !prevState); 
   };
 
   return (
@@ -143,9 +143,9 @@ function HomePage() {
 
         <div className="card">
           <div className="buttons">
-            <button onClick={() => { setSelectedImage(imageCode); setProjectLink(''); }}>Car-Rental</button>
-            <button onClick={() => { setSelectedImage(imagePlan); setProjectLink(''); }}>Dog-training</button>
-            <button onClick={() => { setSelectedImage(imageCollab); setProjectLink(''); }}>Phone-sales</button>
+            <button onClick={() => { setSelectedImage(imageCode); setProjectLink('https://car-rental-bvax.vercel.app/HeroSection'); }}>Car-Rental</button>
+            <button onClick={() => { setSelectedImage(imagePlan); setProjectLink('https://maligatorsyandex.vercel.app'); }}>Dog-training</button>
+            <button onClick={() => { setSelectedImage(imageCollab); setProjectLink('https://njaiko-smartphones.vercel.app/phones'); }}>Phone-sales</button>
           </div>
           <div className="image-container">
             <img src={selectedImage} alt="Selected project" />
@@ -179,8 +179,9 @@ function HomePage() {
           📧 Email Me
         </a>
         <p className='footer'>
-          Based on <strong>Bvakacha Takunda's website</strong>. Coded in <strong>Visual Studio Code</strong>. Built with React.
+        Based on <strong>Bvakacha Takunda's website</strong>. Coded in <strong>Visual Studio Code</strong>. Built with React.
         </p>
+
       </div>
       </section>
 

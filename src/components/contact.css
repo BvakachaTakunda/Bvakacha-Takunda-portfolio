@@ -1,0 +1,43 @@
+
+.co-container {
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .lastheading {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .lastparagraph {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+  
+  .button-co {
+    background-color: #3a3a3a;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  .button-co:hover {
+    background-color: #5e5e5e;
+  }
+  
+  .footer {
+    margin-top: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9em;
+    color: #333;
+  }
+  
+  .footer strong {
+    color: #ff6347;
+  }
+  

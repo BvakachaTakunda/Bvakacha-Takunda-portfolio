@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-import '../components/portproject.css'; // Include your CSS file for styling
+import '../components/portproject.css'; 
 import imageCode from '../images/WhatsApp Image 2024-11-25 at 00.18.40_6130a69b.jpg';
 import imagePlan from '../images/WhatsApp Image 2024-11-25 at 00.21.03_fbe69ca2.jpg';
-import imageCollab from '../images/WhatsApp Image 2024-11-25 at 00.18.40_6130a69b.jpg';
+import imageCollab from '../images/WhatsApp Image 2024-08-28 at 20.28.40_f623aceb.jpg';
 
 function App() {
-  // State management for selected image and project link
+ 
   const [selectedImage, setSelectedImage] = useState(imageCode);
-  const [projectLink, setProjectLink] = useState('https://car-rental-project.com'); // Set default link
+  const [projectLink, setProjectLink] = useState('https://car-rental-project.com'); 
 
-  // Button click handlers to change selected image and project link
+  
   const handleProjectSelect = (image, link) => {
     setSelectedImage(image);
     setProjectLink(link);
@@ -37,12 +37,11 @@ function App() {
       </div>
 
       <div className="card">
-        <div className="buttons">
-          {/* When a button is clicked, change selected image and project link */}
-          <button onClick={() => handleProjectSelect(imageCode, 'https://car-rental-project.com')}>Car-Rental</button>
-          <button onClick={() => handleProjectSelect(imagePlan, 'https://dog-training-project.com')}>Dog-training</button>
-          <button onClick={() => handleProjectSelect(imageCollab, 'https://phone-sales-project.com')}>Phone-sales</button>
-        </div>
+      <div className="buttons">
+            <button onClick={() => { setSelectedImage(imageCode); setProjectLink('https://car-rental-bvax.vercel.app/HeroSection'); }}>Car-Rental</button>
+            <button onClick={() => { setSelectedImage(imagePlan); setProjectLink('https://maligatorsyandex.vercel.app'); }}>Dog-training</button>
+            <button onClick={() => { setSelectedImage(imageCollab); setProjectLink('https://njaiko-smartphones.vercel.app/phones'); }}>Phone-sales</button>
+          </div>
 
         <div className="image-container">
           <img src={selectedImage} alt="Selected project" />
@@ -58,7 +57,12 @@ function App() {
 
         <p>Build code quickly and more securely with GitHub Copilot embedded throughout your workflows.</p>
       </div>
+
+      <p className="footer">
+        Based on <strong>Bvakacha Takunda's website</strong>. Coded in <strong>Visual Studio Code</strong>. Built with React.
+      </p>
     </div>
+    
   );
 }
 

@@ -1,24 +1,24 @@
-
 @media (max-width: 767px) {
-  .scrolldown {
-    display: none; /* Hide the scrolldown section on small screens */
+  
+  .scroll > *:not(.container) {
+    display: none !important;
   }
 
+
   .container {
-    display: flex; /* Ensure the container is displayed */
-    flex-direction: column; /* Maintain the existing layout */
+    display: flex;
+    flex-direction: column;
+    height: 100vh; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 20px;
   }
 
   .scroll {
-    overflow: hidden; /* Prevent scrolling on small screens */
+    overflow: hidden;
   }
 }
 
-@media (min-width: 768px) {
-  .home-page {
-    display: none; /* Hide the home page for larger screens */
-  }
-}
 .container {
   margin: 0 auto;
   align-items: center;
@@ -147,10 +147,19 @@ button {
   border: none;
   border-radius: 25px;
   padding: 10px 15px;
-  margin: 0 10px;
+  margin: 0 2px;
   cursor: pointer;
 }
-
+.button-co{
+  text-decoration: none;
+  background-color: #727274;
+  color: #ffffff;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 15px;
+  margin: 0 2px;
+  cursor: pointer;
+}
 button:hover {
   background-color: #575869;
 }
@@ -161,3 +170,25 @@ button:hover {
   border-radius: 8px;
   margin: 10px;
 }
+.footer {
+  font-family: 'Courier New', Courier, monospace; /* Monospace font for code-like feel */
+  color: black; /* Light text color */
+  padding: 20px;
+  text-align: center;
+  border-top: 2px solid #ddd; /* Border to separate it from content */
+  font-size: 1rem;
+}
+
+.footer strong {
+  color: #ff6347; /* Highlight the strong text with a different color */
+}
+
+.footer a {
+  color: #ff6347; /* Color for any links, if needed */
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+

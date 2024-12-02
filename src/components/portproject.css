@@ -41,7 +41,7 @@
   }
   
   .sidebar-header:hover {
-    color: #61dafb; /* React blue color for hover */
+    color: #61dafb; 
   }
   
   .dropdown-icon {
@@ -64,6 +64,18 @@
     font-size: 16px;
     transition: background-color 0.3s ease;
   }
+
+  h5 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    @media (max-width: 468px){
+      grid-template-columns: 1fr 1fr ;
+    }
+    a{
+      display: flex;
+    }
+  }
+  
   
   .project-list li:hover {
     
@@ -71,7 +83,7 @@
   }
   
   .project-list li span {
-    font-size: 18px; /* Icon size */
+    font-size: 18px;
   }
   
   .project-list li:last-child {
@@ -125,7 +137,7 @@
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #686565; /* Adjust as needed */
+    background-color: #686565; 
     color: white;
     text-decoration: none;
     padding: 0.5rem 1rem;
@@ -143,5 +155,5 @@
   }
   
   .visit-project-overlay:hover {
-    background-color: #7c7c7c; /* Slightly darker shade on hover */
+    background-color: #7c7c7c; 
   }

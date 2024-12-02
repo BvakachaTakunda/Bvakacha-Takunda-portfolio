@@ -1,53 +1,45 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import Portnav from './components/portnav';  // The navigation component
-import Portabout from './components/portabout'; // About Section
-import Port from './components/port'; // Full Content for larger screens
-import Portproject from './components/portproject'; // Project Section
+import Portnav from './components/portnav'; 
+import Portabout from './components/portabout'; 
+import Port from './components/port'; 
+import Portproject from './components/portproject';
+import Home from './components/home';
+import Contact from './components/contact'; 
 
 function AnimatedRoutes() {
-  const location = useLocation(); // Get current location
-
   return (
-    <Routes location={location}> {/* Use location for route transitions */}
+    <Routes>
       <Route path="/portabout" element={<Portabout />} />
-      <Route path="/port" element={<Port />} />
       <Route path="/portproject" element={<Portproject />} />
+      <Route path="/home" element={<Home />} />
+      <Route path="/contact" element={<Contact />} />
     </Routes>
   );
 }
 
 function App() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  
-  // Listen to window resize events and update the state
+
   useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth); // Update window width on resize
-    };
+    const handleResize = () => setWindowWidth(window.innerWidth);
 
     window.addEventListener('resize', handleResize);
 
-    return () => {
-      window.removeEventListener('resize', handleResize); // Cleanup event listener
-    };
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   return (
-    <Router> {/* Wrap everything in BrowserRouter */}
-      <Portnav /> {/* Always render Portnav */}
+    <Router>
+      <Portnav /> 
 
-      {/* On large screens, show the full content */}
+      
       {windowWidth > 768 ? (
-        <Port /> // Always render Port component for larger screens
+        <Port />
       ) : (
-        // For small screens, only show the About section when on the `/portabout` route
-        <AnimatedRoutes />
+        <AnimatedRoutes /> 
       )}
-
-      {/* Animated Routes to handle route changes smoothly */}
-      <AnimatedRoutes />
     </Router>
   );
 }
