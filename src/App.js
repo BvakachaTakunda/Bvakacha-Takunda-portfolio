@@ -33,8 +33,6 @@ function App() {
   return (
     <Router>
       <Portnav /> 
-
-      
       {windowWidth > 768 ? (
         <Port />
       ) : (

@@ -38,7 +38,7 @@ const Home = () => {
           I design responsive, high-performance web solutions tailored to meet users' needs.
         </p>
       </section>
-
+      
       <section className="cta">
         <button className="contact-button">Email Me</button>
       </section>
