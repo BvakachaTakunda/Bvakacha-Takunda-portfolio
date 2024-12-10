@@ -1,6 +1,6 @@
 
 body {
-  background-color: #94abd8; 
+  background-color: #6c91db; 
   color: #000000;
   margin: 0;
 }
@@ -28,7 +28,7 @@ html {
 }
 
 body.dark-mode .content-container {
-  background-color: #000000d7;
+  background-color: #00032edc;
 }
 
 
