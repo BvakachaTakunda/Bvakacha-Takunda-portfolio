@@ -61,6 +61,10 @@
     font-size: 1rem;
     margin-bottom: 8px;
 }
+.btn{
+    display: grid;
+    grid-auto-columns: max-content;
+}
 
 .what-we-do {
     text-align: center;

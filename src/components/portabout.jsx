@@ -44,12 +44,14 @@ const AboutSection = () => {
           <p>
             I am now focusing on integrating these skills into more advanced projects, aiming to deliver efficient, high-quality web and mobile applications.
           </p>
-
+          <div className='btn'>
           <a className="tools">HTML</a>
           <a className="tools">CSS</a>
           <a className="tools">JavaScript</a>
           <a className="tools">React</a>
           <a className="tools">Node</a>
+          </div>
+
         </div>
 
       </div>
