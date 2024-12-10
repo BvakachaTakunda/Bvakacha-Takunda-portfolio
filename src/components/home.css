@@ -1,6 +1,61 @@
+/* Base light mode colors
+:root {
+  --bg-color-light: rgba(255, 255, 255, 0.9);  
+  --text-color-light: #000000; 
+  --navbar-bg-light: #001b27;  
+  --link-color-light: #90a4b9;  
+}
+[data-theme="dark"] {
+  --bg-color-dark: #0a0a0a;  
+  --text-color-dark: #ffffff;  
+  --navbar-bg-dark: #020335; 
+  --link-color-dark: #002142;  
+}
 
- 
+
+body {
+  background-color: var(--bg-color-light);
+  color: var(--text-color-light);
+}
+
+.navbar {
+  background-color: var(--navbar-bg-light);
+}
+
+a {
+  color: var(--link-color-light);
+}
+
+
+[data-theme="dark"] body {
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-dark);
+}
+
+[data-theme="dark"] .navbar {
+  background-color: var(--navbar-bg-dark);
+}
+
+[data-theme="dark"] a {
+  color: var(--link-color-dark);
+}
+ */
+
+
+
+.container {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
   @media (max-width: 767px) {
+
+    .header{
+      margin: 0;
+    }
     .container {
       display: flex;
       flex-direction: column;
@@ -41,5 +96,17 @@
     .contact-button:hover {
       background-color: #757575;
     }
+
+
+    
   }
+  
+  .intro {
+    text-align: center; 
+    margin: 0 auto; 
+    padding: 20px; 
+    max-width: 2000px; 
+    box-sizing: border-box;
+  }
+ 
   

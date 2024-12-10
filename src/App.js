@@ -33,11 +33,9 @@ function App() {
   return (
     <Router>
       <Portnav /> 
-      {windowWidth > 768 ? (
-        <Port />
-      ) : (
-        <AnimatedRoutes /> 
-      )}
+      <div className="content-container"> 
+        {windowWidth > 768 ? <Port /> : <AnimatedRoutes />}
+      </div>
     </Router>
   );
 }

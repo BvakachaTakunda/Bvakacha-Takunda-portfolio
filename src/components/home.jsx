@@ -1,16 +1,24 @@
-import React, { useRef } from 'react';
+import React, { useEffect } from 'react';
 import { FaLinkedin, FaGithub, FaEnvelope, FaMoon } from 'react-icons/fa';
 import './home.css';
 
 const Home = () => {
-  const containerRef = useRef();
+  useEffect(() => {
+    
+    const theme = localStorage.getItem('theme');
+    if (theme === 'dark') {
+      document.body.classList.add('dark-mode');
+    }
+  }, []);
 
   const toggleDarkMode = () => {
-    document.body.classList.toggle('dark-mode');
+    const isDarkMode = document.body.classList.toggle('dark-mode');
+    
+    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
   };
 
   return (
-    <section className="container" ref={containerRef}>
+    <section className="container">
       <header className="header">
         <h1>Takunda Bvakacha</h1>
         <p>Front-End Developer</p>

@@ -1,105 +1,93 @@
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: #fff;
-    @media (min-width: 768px){
-        display: none;
-    }
+  position: fixed;         
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--bg-color);
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+  width: 100%;            
+  z-index: 999;            
+}
+
+
+.content-container {
+  overflow-y: auto;
+  height: calc(100vh - 80px); 
+}
+
+:root {
+  --bg-color: #1f33689d;  
+}
+
+
+.menu-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(1, 0, 20, 0.9);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay-content {
+  position: relative;
+  text-align: center;
+}
+
+.close-icon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 1.5rem 0;
+}
+
+.nav-links li a {
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: var(--accent-color);
+}
+
+.dark-mode-icon {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  cursor: pointer;
+}
+
+
+@media (min-width: 768px) {
+  .navbar {
+    display: none;
   }
-  
-  .navbar-logo h2 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #000;
-  }
-  
-  .navbar-logo span {
-    font-size: 0.75rem;
-    color: #888;
-  }
-  
-  /* Menu icon for small screens */
-  .menu-icon {
-    font-size: 1.5rem;
-    cursor: pointer;
-  }
-  
-  /* Overlay styling */
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 999;
-  }
-  
-  .overlay-content {
-    text-align: center;
-    color: #fff;
-  }
-  
-  .close-icon {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    font-size: 2rem;
-    color: #fff;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .nav-links {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .nav-links li {
-    margin: 1.5rem 0;
-  }
-  
-  .nav-links li a {
-    color: #fff;
-    font-size: 1.5rem;
-    text-decoration: none;
-  }
-  
-  .dark-mode-icon {
-    font-size: 1.5rem;
-    color: #fff;
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .nav-links {
-      display: flex;
-      flex-direction: column;
-    }
-  
-    .menu-icon {
-      display: block;
-    }
-  }
-  
-  .intro, .cta {
-    text-align: center;
-    margin: 40px 0;
-  }
-  
-  .intro h2, .cta h2 {
-    font-size: 1.8em;
-    color: #333;
-  }
-  
-  .intro p, .cta p {
-    color: #555;
-    line-height: 1.6;
-  }
+}
+
+
